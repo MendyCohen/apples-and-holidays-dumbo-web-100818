@@ -46,7 +46,7 @@ end
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
-  holiday_hash[:winter].values.flatten
+  # holiday_hash[:winter].values.flatten
 end
 
 def all_supplies_in_holidays(holiday_hash)
@@ -57,6 +57,7 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
+  holiday_hash[:winter].values.flatten
 holiday_hash.each do |season, holidays_and_supply|
      puts season
     holidays_and_supply.each do |holiday, supply|
@@ -93,27 +94,5 @@ end
 #     }
 #   }
 
-# holiday_hash.each do |k, y|
-#     puts y.keys
-#     y.each do |key, value|
-#       puts "#{key} #{value}"
-#     end
-#   end
 
-# holiday_hash.each do |k, v|
-#   v.each do |key, value|
-#     puts "#{key}"
-#   end
 
-# holiday_hash.collect do |key,value|
-#     if holiday_hash[key].values.include?("BBQ")
-#     holiday_hash[key].keys
-#     end
-# end
-
-# holiday_hash.collect do |key,value|
-#     if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
-#       binding.pry
-#     holiday_hash[key].keys
-#     end
-#   end
