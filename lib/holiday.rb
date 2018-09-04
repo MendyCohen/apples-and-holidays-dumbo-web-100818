@@ -106,7 +106,7 @@ end
 #     puts "#{key}"
 #   end
 
-holiday_hash.each do |key,value|
+holiday_hash.collect do |key,value|
     if holiday_hash[key].values.include?("BBQ")
      holiday_hash[key].keys
     end
