@@ -107,7 +107,7 @@ end
 #   end
 
 holiday_hash.each do |key,value|
-    if holiday_hash[key].values.include?{|key| key == "BBQ"}
+    if holiday_hash[key].values.include?("BBQ")
      holiday_hash[key].keys
     end
 end
