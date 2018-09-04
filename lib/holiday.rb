@@ -95,3 +95,9 @@ holiday_hash = {
 #       puts "#{key} #{value}"
 #     end
 #   end
+
+ holiday_hash.each do |k, v|
+v.each do |key, value|
+ puts "#{key}"
+end
+end
