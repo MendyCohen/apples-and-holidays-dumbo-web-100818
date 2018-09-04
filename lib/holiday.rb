@@ -70,7 +70,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
    holiday_hash.collect do |key,value|
     if value.values.flatten.include?("BBQ")
-      holiday_hash[key].keys.compact
+      holiday_hash[key].keys
     end
   end.compact
 end
