@@ -107,7 +107,7 @@ end
 #   end
 
 holiday_hash.each do |key,value|
-    if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
-    puts holiday_hash[key].values[0]
+    if holiday_hash[key].values.include?{|key| key == :fourth_of_july || key == :memorial_day}
+    puts holiday_hash[key].keys
     end
 end
