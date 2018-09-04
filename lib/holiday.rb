@@ -68,26 +68,30 @@ end
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-
+   holiday_hash.each do |key,value|
+    if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
+    puts holiday_hash[key].keys
+    end
+end
 end
 
 
 
-holiday_hash = {
-    :winter => {
-      :christmas => ["Lights", "Wreath"],
-      :new_years => ["Party Hats"]
-    },
-    :summer => {
-      :fourth_of_july => ["Fireworks", "BBQ"]
-    },
-    :fall => {
-      :thanksgiving => ["Turkey"]
-    },
-    :spring => {
-      :memorial_day => ["BBQ"]
-    }
-  }
+# holiday_hash = {
+#     :winter => {
+#       :christmas => ["Lights", "Wreath"],
+#       :new_years => ["Party Hats"]
+#     },
+#     :summer => {
+#       :fourth_of_july => ["Fireworks", "BBQ"]
+#     },
+#     :fall => {
+#       :thanksgiving => ["Turkey"]
+#     },
+#     :spring => {
+#       :memorial_day => ["BBQ"]
+#     }
+#   }
 
 # holiday_hash.each do |k, y|
 #     puts y.keys
@@ -96,13 +100,13 @@ holiday_hash = {
 #     end
 #   end
 
- holiday_hash.each do |k, v|
-   v.each do |key, value|
-    puts "#{key}"
-  end
+# holiday_hash.each do |k, v|
+#   v.each do |key, value|
+#     puts "#{key}"
+#   end
 
-holiday_hash.each do |key,value|
-    if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
-    puts holiday_hash[key].keys
-    end
-end
+# holiday_hash.each do |key,value|
+#     if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
+#     puts holiday_hash[key].keys
+#     end
+# end
