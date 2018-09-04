@@ -72,7 +72,7 @@ def all_holidays_with_bbq(holiday_hash)
     if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
     puts holiday_hash[key].keys
     end
-end
+  end
 end
 
 
