@@ -100,4 +100,9 @@ holiday_hash = {
    v.each do |key, value|
     puts "#{key}"
   end
+
+holiday_hash.each do |key,value|
+    if holiday_hash[key].keys.any?{|key| key == :key2 || key == :key3}
+    puts my_hash[key].values[0]
+    end
 end
