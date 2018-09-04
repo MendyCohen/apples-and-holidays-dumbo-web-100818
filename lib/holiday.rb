@@ -72,7 +72,7 @@ def all_holidays_with_bbq(holiday_hash)
     if value.values.flatten.include?("BBQ")
       holiday_hash[key].keys
     end
-  end.compact
+  end.compact.flatten
 end
 
 
