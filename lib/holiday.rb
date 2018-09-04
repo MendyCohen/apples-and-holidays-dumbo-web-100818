@@ -69,8 +69,7 @@ def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
    holiday_hash.collect do |key,value|
-    if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
-      binding.pry
+    if holiday_hash[key].values.include?("BBQ")
      holiday_hash[key].keys
     end
   end
@@ -106,8 +105,15 @@ end
 #     puts "#{key}"
 #   end
 
-holiday_hash.collect do |key,value|
-    if holiday_hash[key].values.include?("BBQ")
-     holiday_hash[key].keys
-    end
-end
+# holiday_hash.collect do |key,value|
+#     if holiday_hash[key].values.include?("BBQ")
+#     holiday_hash[key].keys
+#     end
+# end
+
+# holiday_hash.collect do |key,value|
+#     if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
+#       binding.pry
+#     holiday_hash[key].keys
+#     end
+#   end
