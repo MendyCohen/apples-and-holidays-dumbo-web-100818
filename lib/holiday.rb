@@ -98,6 +98,6 @@ holiday_hash = {
 
  holiday_hash.each do |k, v|
 v.each do |key, value|
-  key[2]
+  puts key[2]
 end
 end
