@@ -70,7 +70,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
    holiday_hash.each do |key,value|
     if holiday_hash[key].keys.any?{|key| key == :fourth_of_july || key == :memorial_day}
-    puts holiday_hash[key].keys
+    puts holiday_hash[key].values[0]
     end
   end
 end
